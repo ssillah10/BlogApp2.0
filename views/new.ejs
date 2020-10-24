@@ -1,0 +1,24 @@
+<%- include ('partials/header') %>
+<div class="container createandedit">
+    <h1 class="display-3 formtitle"> Create Blog</h1>
+    <form action="/blogs" method="POST">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" name="blog[title]" placeholder="enter a title">
+        </div>
+        <div class="form-group">
+          <label>Image</label>
+          <input type="text" class="form-control" name="blog[image]" placeholder="enter image url">
+        </div>
+        <div class="form-group">
+            <label>Author</label>
+            <input type="text" class="form-control" name="blog[author]" placeholder="enter author name">
+        </div>   
+        <div class="form-group">
+          <label>Blog Content (Markdown Supported)</label>
+          <textarea class="form-control" rows="6" name="blog[body]"></textarea>
+        </div>
+          <button type="submit" class="btn btn-lg btn-success">Create Post</button>
+      </form>
+</div>
+<%- include ('partials/footer') %>

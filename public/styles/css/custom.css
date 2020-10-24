@@ -1,0 +1,24 @@
+/* your styles go here */
+
+.post{
+    margin-bottom: 50px;
+}
+
+.createandedit{
+    margin:50px,auto;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    width:40%
+}
+
+p{
+    text-align: justify;
+}
+
+.formtitle{
+    padding-bottom: 2rem;
+}
+
+.delbutton{
+    display: inline;
+}

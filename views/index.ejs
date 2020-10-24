@@ -1,0 +1,56 @@
+<%- include('partials/header') %>
+<%- include('partials/hero') %>
+
+<section class="intro1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2 class="h3">The pen is mightier than the sword</h2>
+        <p class="text-big">Write your own <strong>blogs</strong> and <strong>to catch reader's attention</strong>. It
+          all starts with a single character. Share your ideas and vision with the world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="featured-posts no-padding-top">
+  <div class="container">
+    <!-- Post-->
+    <% blogs.forEach(function(blog){ %>
+    <div class="row d-flex align-items-stretch post">
+      <div class="text col-lg-7">
+        <div class="text-inner d-flex align-items-center">
+
+          <div class="content">
+
+            <header class="post-header">
+
+              <!-- <div class="category"><a href="#"><%= blog.title %></a></div> -->
+              <a href="post.html">
+                <h2 class="h4"><%= blog.title%></h2>
+              </a>
+            </header>
+            <p><%- blog.body.substring(0,100) %>...</p>
+            <a href="/blogs/<%=blog._id%>" class="btn btn-outline-info">Show More</a>
+            <footer class="post-footer d-flex align-items-center"><a href="#"
+                class="author d-flex align-items-center flex-wrap">
+                <div class="avatar"><img src="/img/saihou.jpg" alt="..." class="img-fluid"></div>
+                <div class="title"><span><%= blog.author %></span></div>
+              </a>
+              <div class="date"><i class="icon-clock"></i> <%= blog.created.toDateString() %></div>
+              <div class="comments"><i class="icon-comment"></i>12</div>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div class="image col-lg-5"><img src="<%= blog.image %>" alt="..."></div>
+    </div>
+
+
+    <!-- /img/avatar-1.jpg -->
+    <!-- /img/featured-pic-1.jpeg -->
+    <% }) %>
+
+  </div>
+</section>
+
+<%- include('partials/footer') %>
